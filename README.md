@@ -15,7 +15,9 @@
 
 ## Demo
 
-![Demo1](demo_img/IMG_2881.jpg)
+![Demo1](demo_img/IMG_2882.png)
+
+![Demo2](demo_img/IMG_2881.jpg)
 
 ~~已经刷吐了~~
 
