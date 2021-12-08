@@ -1,0 +1,74 @@
+{
+    "push": "",
+    "common": {
+        "bell": "common_bell.bmp",
+        "main": "common_main.bmp",
+        "continue": "common_continue.bmp",
+        "prepared": "common_prepared.bmp",
+        "unprepared": "common_unprepared.bmp",
+        "full": "common_full.bmp"
+    },
+    "boss": [
+        {
+            "name": "boss_fire_super",
+            "friendly_name": "废墟魔像 超级",
+            "ref_img": "boss_fire_super.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_fire_high_plus",
+            "friendly_name": "废墟魔像 高级+",
+            "ref_img": "boss_fire_high_plus.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_tiger_high",
+            "friendly_name": "寄居蟹船长 中级",
+            "ref_img": "boss_captain_medium.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_captain_high",
+            "friendly_name": "寄居蟹船长 高级",
+            "ref_img": "boss_captain_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_immortal_high",
+            "friendly_name": "不死王瑞西塔尔 高级",
+            "ref_img": "boss_immortal_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_immortal_medium",
+            "friendly_name": "不死王瑞西塔尔 中级",
+            "ref_img": "boss_immortal_medium.bmp",
+            "target": 1
+        },
+        
+        {
+            "name": "boss_snake_high",
+            "friendly_name": "八岐大蛇 高级",
+            "ref_img": "boss_snake_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_tiger_high",
+            "friendly_name": "白虎 高级",
+            "ref_img": "boss_tiger_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_arc_high",
+            "friendly_name": "诅咒弧魔艾基尔 高级",
+            "ref_img": "boss_arc_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_administer_high",
+            "friendly_name": "管理者 高级",
+            "ref_img": "boss_administer_high.bmp",
+            "target": 1
+        }
+    ]
+}
