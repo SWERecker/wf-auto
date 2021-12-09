@@ -14,7 +14,7 @@ class Device:
         self.ip = device_ip
         self.friendly_name = ""
         self.inited = False
-        if not fast:
+        if fast:
             print("ADB Fast load Enabled.")
             print(self.shell(f'connect {self.ip}'))
         else:
@@ -22,6 +22,7 @@ class Device:
             print(self.shell(f'connect {self.ip}'))
             self.friendly_name = self.shell("shell getprop ro.product.model")
             print("Device:", self.friendly_name)
+        self.sdk = int(self.shell("shell getprop ro.build.version.sdk").replace('\n', ""))
 
     def shell(self, cmd):
         """
@@ -53,10 +54,12 @@ class Device:
         res.wait()
         res.stdout.close()
         if res.poll() == 0:
-            return cv2.imdecode(np.frombuffer(result.replace(b'\r\n', b'\n'), np.uint8), 1)
+            if sdk > 23:
+                return cv2.imdecode(np.frombuffer(result.replace(b'\r\n', b'\n'), np.uint8), 1)
+            else:
+                return cv2.imdecode(np.frombuffer(result.replace(b'\r\r\n', b'\n'), np.uint8), 1)
         else:
             raise Exception("无法正常截图，检查模拟器工作情况")
-            # return None
 
     def touch(self, _pos):
         """
