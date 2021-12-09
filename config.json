@@ -63,6 +63,12 @@
             "friendly_name": "管理者 高级",
             "ref_img": "boss_administer_high.bmp",
             "target": 1
+        },
+        {
+            "name": "boss_owl",
+            "friendly_name": "维·索拉斯 初级",
+            "ref_img": "boss_owl.bmp",
+            "target": 1
         }
     ]
 }
