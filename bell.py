@@ -98,8 +98,8 @@ if __name__ == "__main__":
                         continue
                     sleep(1)
                     print("点击准备")
-                    device.touch(util.random_pos(pos.prepare_pos))
                     while True:
+                        device.touch(util.random_pos(pos.prepare_pos))
                         sleep(operation_delay)
                         screenshot = device.screenshot()
                         prepared_simi = fsim(common_ref["prepared"],
@@ -150,7 +150,6 @@ if __name__ == "__main__":
                             print(msg)
                             util.log(msg)
                             bark.push(msg)
-                            pass
                         sleep(3)
                     print("\n正在回到主界面.", end="", flush=True)
                     attempt_count = 0
@@ -169,7 +168,8 @@ if __name__ == "__main__":
                         attempt_count += 1
                         if attempt_count > 5:
                             print("似乎返回主界面失败，尝试使用返回键")
-
+                            device.button("KEYCODE_BACK")
+                            attempt_count = 0
                         sleep(4)
                 else:
                     print("\n不是要刷的怪物，继续等待.", end="", flush=True)
