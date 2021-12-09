@@ -54,7 +54,7 @@ class Device:
         res.wait()
         res.stdout.close()
         if res.poll() == 0:
-            if sdk > 23:
+            if self.sdk > 23:
                 return cv2.imdecode(np.frombuffer(result.replace(b'\r\n', b'\n'), np.uint8), 1)
             else:
                 return cv2.imdecode(np.frombuffer(result.replace(b'\r\r\n', b'\n'), np.uint8), 1)
