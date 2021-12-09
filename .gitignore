@@ -1,0 +1,7 @@
+results/*
+develop/*
+test.py
+*/__pycache__
+.idea/*
+config.json
+record.txt

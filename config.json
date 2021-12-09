@@ -1,5 +1,6 @@
 {
     "push": "",
+    "filter_boss": 1,
     "common": {
         "bell": "common_bell.bmp",
         "main": "common_main.bmp",
@@ -13,7 +14,7 @@
             "name": "boss_fire_super",
             "friendly_name": "废墟魔像 超级",
             "ref_img": "boss_fire_super.bmp",
-            "target": 1
+            "target": 0
         },
         {
             "name": "boss_fire_high_plus",
@@ -39,13 +40,6 @@
             "ref_img": "boss_immortal_high.bmp",
             "target": 1
         },
-        {
-            "name": "boss_immortal_medium",
-            "friendly_name": "不死王瑞西塔尔 中级",
-            "ref_img": "boss_immortal_medium.bmp",
-            "target": 1
-        },
-        
         {
             "name": "boss_snake_high",
             "friendly_name": "八岐大蛇 高级",
