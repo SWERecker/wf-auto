@@ -9,7 +9,7 @@
 
 ## 已知bug
 
-- 返回主界面偶尔失效
+- 暂无
 
 ## Demo
 
@@ -25,35 +25,10 @@
 
 ## 模拟器测试环境
 
-- BlueStacks 5.4.100.1026 Nougat 64 位元 (支援 Hyper-V) 版本
-
-## 模拟器设置
-
-### 显示
-
-- 直向
-- 720*1280
-- 像素密度 240DPI(中等) / 160DPI
-
-### 图形
-
-- 图形引擎模式：效能
-
-- 图形渲染器：DirectX
-- 界面渲染器：Auto
-
-### 进阶
-
-- 安卓调试桥：开
-
-----
-
-测试
-
-MuMu模拟器 2.6.7
-
-极速+（默认配置），自定义分辨率720*1280, 160DPI 测试OK
-
+- BlueStacks 5.4.100.1026 Nougat (支援 Hyper-V) 版本 
+- - 直向 720*1280 像素密度 240DPI(中等) / 160DPI | 图形渲染器：DirectX | 安卓调试桥：开
+- MuMu模拟器 2.6.7
+- - 极速+（默认配置），自定义分辨率720*1280, 160DPI 测试OK
 
 ### 游戏
 世界弹射物语 官服
@@ -62,7 +37,7 @@ MuMu模拟器 2.6.7
 
 ## 依赖
 
-`opencv image_similarity_measures PIL numpy`
+`opencv-python image_similarity_measures PIL numpy`
 
 同时需要配置好adb
 
