@@ -179,6 +179,7 @@ if __name__ == "__main__":
                 print("\n点击保持唤醒.")
                 device.touch(util.random_pos(pos.awake_pos))
                 idle_count = 0
+            idle_count += 1
             sleep(operation_delay)
     except KeyboardInterrupt:
         print()
