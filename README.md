@@ -45,7 +45,7 @@
 
 ```
 {
-	"name": "boss_fire_super", <- 用处不大
+	"name": "boss_fire_super", <- results文件名
 	"friendly_name": "废墟魔像 超级", <- 推送、日志记录
 	"ref_img": "boss_fire_super.bmp", <- reference文件夹下需要存在此文件
 	"target": 1 <- 0/1 是否要刷

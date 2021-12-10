@@ -8,23 +8,6 @@ import cv2
 
 from wf_auto import *
 
-"""
-----模拟器测试环境----
-BlueStacks 5.4.100.1026 N64
-Nougat 64 位元 (支援 Hyper-V) 版本
-
-----模拟器设置----
-显示  直向，720*1280，像素密度 240DPI(中等)
-图形  图形引擎模式：效能
-     图形渲染器：DirectX
-     界面渲染器：Auto
-进阶  安卓调试桥：开
-
-* 其他模拟器未测试
-
-----游戏----
-世界弹射物语 官服
-"""
 
 ref_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), "reference")
 results_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), "results")
@@ -91,10 +74,8 @@ if __name__ == "__main__":
                                           util.get_area_from_image(pos.full_pos, screenshot))
                     if room_full_simi > threshold:
                         print("房间已满，返回继续等待")
-                        bark.push("进入房间失败：已满/正在开始")
+                        bark.push("进入房间失败：已满或正在开始")
                         device.touch(util.random_pos(pos.full_continue_pos))
-                        file_name = f"{time.strftime('%Y%m%d_%H%M%S', time.localtime())}_{boss_info['name']}.jpg"
-                        cv2.imwrite(os.path.join(results_folder, file_name), screenshot)
                         continue
                     sleep(1)
                     print("点击准备")
@@ -130,10 +111,8 @@ if __name__ == "__main__":
                         if finish:
                             print(f"\n{boss_info['friendly_name']} 已正常结束")
                             util.log(f"{boss_info['friendly_name']} 已正常结束")
-                            screenshot = device.screenshot()
-                            cv2.imwrite(
-                                os.path.join(results_folder,
-                                             f"{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.jpg"), screenshot)
+                            file_name = f"{time.strftime('%Y%m%d_%H%M%S', time.localtime())}_{boss_info['name']}.jpg"
+                            cv2.imwrite(os.path.join(results_folder, file_name), screenshot)
                             bark.push(f"{boss_info['friendly_name']} 正常结束")
                             device.touch(util.random_pos(pos.continue_pos))
                             break
