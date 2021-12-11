@@ -154,7 +154,7 @@ if __name__ == "__main__":
                     print("\n不是要刷的怪物，继续等待.", end="", flush=True)
                     device.touch(util.random_pos(pos.decline_pos))
 
-            if idle_count == 70:
+            if idle_count == 100:
                 print("\n点击保持唤醒.")
                 device.touch(util.random_pos(pos.awake_pos))
                 idle_count = 0

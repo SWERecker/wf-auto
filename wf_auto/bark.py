@@ -16,5 +16,6 @@ class Push:
     def push(self, content):
         if self.fail:
             return
-        requests.get(urljoin(self.base, f"{self.title}/{content}/"), params={"group": self.group, "icon": self.icon})
-
+        content = content
+        requests.get(urljoin(self.base, f"{self.title}/{content.replace('+', '%2B')}/"),
+                     params={"group": self.group, "icon": self.icon})
