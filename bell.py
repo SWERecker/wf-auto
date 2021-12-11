@@ -129,6 +129,9 @@ if __name__ == "__main__":
                             print(msg)
                             util.log(msg)
                             bark.push(msg)
+                            device.touch(util.random_pos(pos.full_continue_pos))
+                            sleep(2)
+                            break
                         sleep(3)
                     print("\n正在回到主界面.", end="", flush=True)
                     attempt_count = 0

@@ -92,4 +92,4 @@ class Device:
         pic = get_area_from_image(boss_pos, scr)
         timestamp = int(time.time())
         log(f"记录未知怪物 boss_unknown_{timestamp}.bmp")
-        cv2.imwrite(os.path.join(f"../reference/boss_unknown_{timestamp}.bmp"), pic)
+        cv2.imwrite(f"reference/boss_unknown_{timestamp}.bmp", pic)
