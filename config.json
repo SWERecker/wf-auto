@@ -7,7 +7,8 @@
         "continue": "common_continue.bmp",
         "prepared": "common_prepared.bmp",
         "unprepared": "common_unprepared.bmp",
-        "full": "common_full.bmp"
+        "full": "common_full.bmp",
+        "in_room": "common_in_room.bmp"
     },
     "boss": [
         {

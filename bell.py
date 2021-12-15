@@ -1,14 +1,15 @@
 import os
-from time import sleep
-import time
 import sys
+import time
+import warnings
+from time import sleep
 
-from image_similarity_measures.quality_metrics import fsim
 import cv2
+from image_similarity_measures.quality_metrics import fsim
 
 from wf_auto import *
 from wf_auto.util import Debug
-import warnings
+
 warnings.filterwarnings('ignore')
 
 ref_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), "reference")
@@ -74,19 +75,30 @@ if __name__ == "__main__":
 
                     boss_accept = boss_info["target"]
                 if boss_accept:
-                    Debug.print("是要刷的怪物，接受")
+                    Debug.print("点击接受")
                     device.touch(pos.accept_pos)
                     sleep(1.5)
                     screenshot = device.screenshot()
                     room_full_simi = fsim(common_ref["full"],
                                           util.get_area_from_image(pos.full_pos, screenshot))
                     if room_full_simi > threshold:
-                        Debug.print("房间已满或正在开始，返回继续等待")
+                        Debug.print("房间已满或正在开始，返回继续等待", inline=True)
                         bark.push("进入房间失败：已满或正在开始")
                         device.touch(pos.full_continue_pos)
                         continue
-                    sleep(1.5)
-                    Debug.print("点击准备")
+                    Debug.print("正在等待进入房间.", inline=True)
+                    while True:
+                        sleep(1)
+                        screenshot = device.screenshot()
+                        in_room_simi = fsim(common_ref["in_room"],
+                                            util.get_area_from_image(pos.in_room_pos, screenshot))
+                        if in_room_simi < threshold:
+                            Debug.print(".", prefix=False, inline=True)
+                            continue
+                        else:
+                            Debug.print("已进入房间！", new_line=True)
+                            break
+                    Debug.print("点击准备.")
                     while True:
                         device.touch(pos.prepare_pos)
                         sleep(operation_delay)
@@ -162,11 +174,11 @@ if __name__ == "__main__":
                             Debug.print(".", prefix=False, inline=True)
                             device.touch(pos.continue_pos)
                         attempt_count += 1
-                        if attempt_count > 5:
+                        if attempt_count > 8:
                             Debug.print("似乎返回主界面失败，尝试使用返回键", new_line=True)
                             device.button("KEYCODE_BACK")
                             attempt_count = 0
-                        sleep(4)
+                        sleep(2)
                 else:
                     Debug.print("不是要刷的怪物，继续等待.", inline=True, new_line=True)
                     device.touch(pos.decline_pos)
