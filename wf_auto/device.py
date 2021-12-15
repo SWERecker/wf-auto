@@ -1,11 +1,10 @@
-import os
 import subprocess
 import time
 
 import cv2
 import numpy as np
 
-from .util import get_area_from_image, log
+from .util import get_area_from_image, random_pos, Debug
 from .pos import boss_pos
 
 
@@ -69,7 +68,8 @@ class Device:
         :return: None
         """
         # print("Touching", pos)
-        res = subprocess.Popen(f'adb -s {self.ip} shell input tap {_pos[0]} {_pos[1]}', shell=True,
+        touch_pos = random_pos(_pos)
+        res = subprocess.Popen(f'adb -s {self.ip} shell input tap {touch_pos[0]} {touch_pos[1]}', shell=True,
                                stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         res.wait()
         res.stdout.close()
@@ -91,5 +91,5 @@ class Device:
         scr = self.screenshot()
         pic = get_area_from_image(boss_pos, scr)
         timestamp = int(time.time())
-        log(f"记录未知怪物 boss_unknown_{timestamp}.bmp")
+        Debug.log(f"记录未知怪物 boss_unknown_{timestamp}.bmp")
         cv2.imwrite(f"reference/boss_unknown_{timestamp}.bmp", pic)

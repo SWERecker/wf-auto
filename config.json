@@ -75,6 +75,12 @@
             "friendly_name": "废墟魔像 高级",
             "ref_img": "boss_fire_high.bmp",
             "target": 1
+        },
+        {
+            "name": "boss_administer_medium",
+            "friendly_name": "管理者 中级",
+            "ref_img": "boss_administer_medium.bmp",
+            "target": 1
         }
         
     ]

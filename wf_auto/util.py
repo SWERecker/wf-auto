@@ -8,9 +8,20 @@ from PIL import Image
 from image_similarity_measures.quality_metrics import fsim
 
 
-def log(content):
-    with open("record.txt", 'a', encoding="utf-8") as f:
-        f.write(f"{time.strftime('%Y%m%d_%H%M%S', time.localtime())} | {content}\n")
+class Debug:
+    @staticmethod
+    def print(content, prefix=True, inline=False, new_line=False):
+        head = f"{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())} | " if prefix else ""
+        line = "\n" if new_line else ""
+        if inline:
+            print(f"{line}{head}{content}", end="", flush=True)
+        else:
+            print(f"{line}{head}{content}")
+
+    @staticmethod
+    def log(content):
+        with open("record.txt", 'a', encoding="utf-8") as f:
+            f.write(f"{time.strftime('%Y%m%d_%H%M%S', time.localtime())} | {content}\n")
 
 
 def get_boss(_boss: Image, _ref: list, boss_threshold: float) -> dict:
