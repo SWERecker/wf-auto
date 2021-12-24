@@ -41,6 +41,13 @@ def get_boss(_boss: Image, _ref: list, boss_threshold: float) -> dict:
     }
 
 
+def get_boss_friendly_name(_ref: list, boss_name: str) -> str:
+    for mon in _ref:
+        if boss_name == mon["name"]:
+            return mon["friendly_name"]
+    return "未知怪物"
+
+
 def random_pos(area) -> [int, int]:
     """
     在某范围内随机一个触摸点

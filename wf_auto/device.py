@@ -81,14 +81,15 @@ class Device:
         }
         self.shell(f"shell input keyevent {btns[btn_name]}")
 
-    def get_unknown_boss(self):
+    def get_unknown_boss(self, screenshot=None):
         """
         如果遇到未知的怪物，自动截图存储至reference文件夹下备用.
 
         :return: None
         """
-        print("未知怪物，存储备用")
-        scr = self.screenshot()
+        scr = screenshot
+        if scr is None:
+            scr = self.screenshot()
         pic = get_area_from_image(boss_pos, scr)
         timestamp = int(time.time())
         Debug.log(f"记录未知怪物 boss_unknown_{timestamp}.bmp")

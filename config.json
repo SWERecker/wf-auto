@@ -12,9 +12,33 @@
     },
     "boss": [
         {
+            "name": "boss_immortal_super",
+            "friendly_name": "不死王瑞西塔尔 超级",
+            "ref_img": "boss_immortal_super.bmp",
+            "target": 1
+        },
+        {
             "name": "boss_fire_super",
             "friendly_name": "废墟魔像 超级",
             "ref_img": "boss_fire_super.bmp",
+            "target": 0
+        },
+        {
+            "name": "boss_fire_high",
+            "friendly_name": "废墟魔像 高级",
+            "ref_img": "boss_fire_high.bmp",
+            "target": 0
+        },
+        {
+            "name": "boss_immortal_high_plus",
+            "friendly_name": "不死王瑞西塔尔 高级+",
+            "ref_img": "boss_immortal_high_plus.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_fire_high_plus",
+            "friendly_name": "废墟魔像 高级+",
+            "ref_img": "boss_fire_high_plus.bmp",
             "target": 0
         },
         {
@@ -54,12 +78,6 @@
             "target": 1
         },
         {
-            "name": "boss_fire_high_plus",
-            "friendly_name": "废墟魔像 高级+",
-            "ref_img": "boss_fire_high_plus.bmp",
-            "target": 1
-        },
-        {
             "name": "boss_administer_high",
             "friendly_name": "管理者 高级",
             "ref_img": "boss_administer_high.bmp",
@@ -69,12 +87,6 @@
             "name": "boss_owl",
             "friendly_name": "维·索拉斯 初级",
             "ref_img": "boss_owl.bmp",
-            "target": 1
-        },
-        {
-            "name": "boss_fire_high",
-            "friendly_name": "废墟魔像 高级",
-            "ref_img": "boss_fire_high.bmp",
             "target": 1
         },
         {
