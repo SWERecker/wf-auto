@@ -79,9 +79,9 @@ if __name__ == "__main__":
                 else:
                     boss_info = util.get_boss(
                         util.get_area_from_image(pos.boss_pos, bell_info), boss_ref, boss_threshold)
+                    Debug.print(f"怪物名称：{boss_info['friendly_name']}")
+                    Debug.log(f"怪物名称：{boss_info['friendly_name']}")
                     if boss_info["name"] == "unknown":
-                        Debug.print(f"怪物名称：{boss_info['friendly_name']}")
-                        Debug.log(f"怪物名称：{boss_info['friendly_name']}")
                         Debug.print("未知Boss，保存备用")
                         device.get_unknown_boss(bell_info)
                     boss_accept = boss_info["target"]
