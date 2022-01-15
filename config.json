@@ -12,6 +12,42 @@
     },
     "boss": [
         {
+            "name": "boss_tide_high",
+            "friendly_name": "潮汐巨妖 高级",
+            "ref_img": "boss_tide_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_sec_high",
+            "friendly_name": "Sec-5200Li 高级",
+            "ref_img": "boss_sec_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_tide_medium",
+            "friendly_name": "潮汐巨妖 中级",
+            "ref_img": "boss_tide_medium.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_sec_medium",
+            "friendly_name": "Sec-5200Li 中级",
+            "ref_img": "boss_sec_medium.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_dragon_fire_high_plus",
+            "friendly_name": "伊萨巴迪卡 高级+",
+            "ref_img": "boss_dragon_fire_high_plus.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_dragon_fire_high",
+            "friendly_name": "伊萨巴迪卡 高级",
+            "ref_img": "boss_dragon_fire_high.bmp",
+            "target": 1
+        },
+        {
             "name": "boss_immortal_super",
             "friendly_name": "不死王瑞西塔尔 超级",
             "ref_img": "boss_immortal_super.bmp",
@@ -94,7 +130,18 @@
             "friendly_name": "管理者 中级",
             "ref_img": "boss_administer_medium.bmp",
             "target": 1
+        },
+        {
+            "name": "boss_fire_medium",
+            "friendly_name": "废墟魔像 中级",
+            "ref_img": "boss_fire_medium.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_tiger_medium",
+            "friendly_name": "白虎 中级",
+            "ref_img": "boss_tiger_medium.bmp",
+            "target": 1
         }
-        
     ]
 }
