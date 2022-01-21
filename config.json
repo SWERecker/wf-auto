@@ -12,6 +12,12 @@
     },
     "boss": [
         {
+            "name": "boss_conductor_high_plus",
+            "friendly_name": "指挥者 高级+",
+            "ref_img": "boss_conductor_high_plus.bmp",
+            "target": 1
+        },
+        {
             "name": "boss_tide_high",
             "friendly_name": "潮汐巨妖 高级",
             "ref_img": "boss_tide_high.bmp",
