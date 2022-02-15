@@ -12,15 +12,9 @@
     },
     "boss": [
         {
-            "name": "boss_arc_super",
-            "friendly_name": "诅咒弧魔艾基尔 超级",
-            "ref_img": "boss_arc_super.bmp",
-            "target": 1
-        },
-        {
-            "name": "boss_arc_high_plus",
-            "friendly_name": "诅咒弧魔艾基尔 高级+",
-            "ref_img": "boss_arc_high_plus.bmp",
+            "name": "boss_ilmetaray_high_plus",
+            "friendly_name": "伊尔梅塔雷 高级+",
+            "ref_img": "boss_ilmetaray_high_plus.bmp",
             "target": 1
         },
         {
@@ -33,6 +27,18 @@
             "name": "boss_rafu_high",
             "friendly_name": "女王·拉芙 高级",
             "ref_img": "boss_rafu_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_arc_super",
+            "friendly_name": "诅咒弧魔艾基尔 超级",
+            "ref_img": "boss_arc_super.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_arc_high_plus",
+            "friendly_name": "诅咒弧魔艾基尔 高级+",
+            "ref_img": "boss_arc_high_plus.bmp",
             "target": 1
         },
         {
