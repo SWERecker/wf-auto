@@ -18,6 +18,18 @@
             "target": 1
         },
         {
+            "name": "boss_ilmetaray_high",
+            "friendly_name": "伊尔梅塔雷 高级",
+            "ref_img": "boss_ilmetaray_high.bmp",
+            "target": 1
+        },
+        {
+            "name": "boss_ilmetaray_medium",
+            "friendly_name": "伊尔梅塔雷 中级",
+            "ref_img": "boss_ilmetaray_medium.bmp",
+            "target": 1
+        },
+        {
             "name": "boss_rafu_super",
             "friendly_name": "女王·拉芙 超级",
             "ref_img": "boss_rafu_super.bmp",
@@ -63,7 +75,7 @@
             "name": "boss_tide_medium",
             "friendly_name": "潮汐巨妖 中级",
             "ref_img": "boss_tide_medium.bmp",
-            "target": 1
+            "target": 0
         },
         {
             "name": "boss_sec_medium",
